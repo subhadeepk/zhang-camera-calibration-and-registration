@@ -45,13 +45,13 @@ def run(mode):
     print("Initialized kc = ", kc_init)
 
 
-    return A_init, kc_init, all_RT_init, all_image_corners, all_H_init, world_corners
+    return A_init, all_image_corners, all_H_init, world_corners
 
 
 #run once
 
-rgb_A, rgb_kc, rgb_rt, rgb_corners, rgb_h, wc = run("rgb")
-ir_A, ir_kc, ir_rt, ir_corners, ir_h, wc_1 = run("ir")
+rgb_A, rgb_corners, rgb_h, wc = run("rgb")
+ir_A, ir_corners, ir_h, wc_1 = run("ir")
 
 # reprojects control points seen by the RGB camera onto the IR camera's frame of reference and finds distance 
 
